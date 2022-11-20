@@ -2,7 +2,7 @@ import { createContext } from 'react';
 
 export const defaultObject = {
   isUserLogged: false,
-  toggleLoggedState: () => {},
+  toggleLoggedState: () => console.log('Domyślny Provider'),
 };
 
 export const AppContext = createContext(defaultObject);
