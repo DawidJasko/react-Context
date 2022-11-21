@@ -10,8 +10,10 @@ const App = () => {
   return (
     <div>
       <AppProvider>
+        {/* <ConfigProvider> */}
         <UserInfo />
         <Button />
+        {/* </ConfigProvider> */}
       </AppProvider>
     </div>
   );

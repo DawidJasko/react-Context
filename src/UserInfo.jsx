@@ -23,7 +23,7 @@ import { AppContext } from './AppContext';
 // LEPSZA WERSJA
 const UserInfo = () => {
   const { isUserLogged } = useContext(AppContext);
-
+  // const { isDarkMode } = useContext(ConfigContext)
   const userLoggedInfo = isUserLogged ? 'zalogowany' : 'niezalogowany';
 
   return (
