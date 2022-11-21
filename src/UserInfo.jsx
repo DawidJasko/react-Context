@@ -1,5 +1,5 @@
 import React from 'react';
-import { PureComponent } from 'react';
+import React, { useContext } from 'react';
 
 import { AppContext } from './AppContext';
 
@@ -21,19 +21,16 @@ import { AppContext } from './AppContext';
 // }
 
 // LEPSZA WERSJA
-class UserInfo extends PureComponent {
-  static contextType = AppContext;
+const UserInfo = () => {
+  const { isUserLogged } = useContext(AppContext);
 
-  render() {
-    const { isUserLogged } = this.context;
-    const userLoggedInfo = isUserLogged ? 'zalogowany' : 'niezalogowany';
+  const userLoggedInfo = isUserLogged ? 'zalogowany' : 'niezalogowany';
 
-    return (
-      <div>
-        <p>Użytkownik jest {userLoggedInfo}</p>
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <p>Użytkownik jest {userLoggedInfo}</p>
+    </div>
+  );
+};
 
 export default UserInfo;
